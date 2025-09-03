@@ -1,0 +1,546 @@
+/* @import "tailwindcss"; */
+
+/* Global Styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ---------- Header Container ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Logo Container ---------- */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Navigation Container ---------- */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items li {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* ---------- Navigation Links ---------- */
+.nav-items a {
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-items a:hover {
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+.nav-items a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Remove default link styling */
+.nav-items a:visited {
+  color: inherit;
+}
+
+/* ---------- Online Status ---------- */
+.nav-items li:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  padding: 6px 12px;
+  background-color: #f9fafb;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ---------- Cart Item ---------- */
+.nav-items li:last-of-type {
+  color: #6b7280;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-items li:last-of-type:hover {
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+/* ---------- Login Button ---------- */
+.login {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.login:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.login:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.login:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .nav-items {
+    gap: 16px;
+  }
+  
+  .nav-items ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-items li:first-child {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .nav-items {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nav-items ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Search */
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 700px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.search:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #007bff, #339af0);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.3);
+}
+
+
+/* Restaurant Cards */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 32px 32px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+ 0% {
+ opacity: 0;
+ transform: translateY(30px);
+ }
+ 100% {
+ opacity: 1;
+ transform: translateY(0);
+ }
+}
+
+/* Animation Applied to Cards */
+.res-card {
+ background-color: #ffffff;
+ width: 250px;
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ overflow: hidden;
+ padding: 16px;
+ transition: transform 0.2s ease-in-out;
+ cursor: pointer;
+ opacity: 0; /* Initial state for animation */
+ animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Optional: Stagger animation using nth-child */
+.res-card:nth-child(1) { animation-delay: 0.1s; }
+.res-card:nth-child(2) { animation-delay: 0.2s; }
+.res-card:nth-child(3) { animation-delay: 0.3s; }
+.res-card:nth-child(4) { animation-delay: 0.4s; }
+.res-card:nth-child(5) { animation-delay: 0.5s; }
+.res-card:nth-child(6) { animation-delay: 0.6s; }
+.res-card:nth-child(7) { animation-delay: 0.7s; }
+.res-card:nth-child(8) { animation-delay: 0.8s; }
+/* Add more if needed */
+
+
+
+.res-card:hover {
+  transform: scale(1.03);
+}
+
+.res-logo {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.res-card h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  color: #222;
+}
+
+.res-card h4 {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.filter-btn {
+  background-color: #007bff; /* Bootstrap blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.filter-btn:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+.filter {
+  margin: 16px 32px;
+  text-align: center;
+}
+
+
+/* Shimmer loading styles */
+
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 32px 32px;
+}
+
+.shimmer-card {
+  margin: 10px;
+  background-color: #fff;
+  width: 250px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shimmer-img,
+.shimmer-title,
+.shimmer-tags,
+.shimmer-details {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 50%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.3s infinite linear;
+  border-radius: 8px;
+}
+
+.shimmer-img {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 12px;
+}
+
+.shimmer-title {
+  width: 70%;
+  height: 18px;
+  margin-bottom: 8px;
+}
+
+.shimmer-tags {
+  width: 90%;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.shimmer-details {
+  width: 60%;
+  height: 14px;
+}
+
+
+
+.shimmer-menu,
+.shimmer-menu-main {
+  background-color: #efefef;
+}
+
+/*Animation to Shimmer  Menu card Start*/
+.stroke {
+  /* height: 15px; */
+  background: #777;
+}
+
+.stroke-color {
+  background: #777;
+}
+
+.animate {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+
+/* * Menu page */
+.menu-header {
+  height: 30vh;
+  background-color: #000;
+  color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-header .menu-header-left img {
+  width: 250px;
+  height: 170px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-header .menu-header-right .top h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.menu-header .menu-header-right .top h3 {
+  font-weight: normal;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.menu-header .menu-header-right .bottom {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.menu-header .menu-header-right .bottom h4 {
+  border-right: 4px solid #ccc;
+  padding-right: 20px;
+}
+
+.menu-main {
+  /* margin-top: 100px; */
+  margin: 80px 150px;
+}
+
+.menu-main h2 {
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+.menu-main .items {
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.menu-main-card-container {
+  margin-top: 50px;
+  border-radius: 7px;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #3b3a3a;
+}
+
+.menu-card-left .menu-name {
+  font-size: 24px;
+  opacity: 0.8;
+}
+
+.menu-card-left .menu-price {
+  font-weight: normal;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+.menu-card-left .menu-description {
+  font-weight: normal;
+  opacity: 0.8;
+  margin-top: 15px;
+}
+
+.menu-card-right img {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+}
