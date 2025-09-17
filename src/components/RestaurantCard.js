@@ -15,6 +15,7 @@ const RestaurantCard = (props) => {
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating}⭐ ⏱️ 38 mins</h4>
       <h4>{costForTwo}</h4>
+      {/* <button className="text-white bg-green-500 p-1 rounded-lg">Add +</button> */}
     </div>
   );
 };

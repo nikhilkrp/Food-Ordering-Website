@@ -7,10 +7,12 @@ import Contact from './components/Contact';
 import Grocery from './components/Grocery';
 import RestaurantMenu from './components/RestaurantMenu';
 import Error from './components/Error';
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 function App() {
   return (
- <>
+ <Provider store={appStore}>
    <Header />
       <Routes>
         <Route path="/" element={<Body />} />
@@ -20,7 +22,7 @@ function App() {
         <Route path="/restaurants/:resId" element={<RestaurantMenu />} />
         <Route path="*" element={<Error />} />
       </Routes>
- </>
+ </Provider>
       
 
   );

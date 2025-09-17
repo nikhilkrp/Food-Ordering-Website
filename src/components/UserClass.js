@@ -34,16 +34,7 @@ class UserClass extends React.Component {
     console.log(this.props.name + " constructor");
   }
 
-  async componentDidMount() {
-    console.log(this.props.name + " Component Did Mount");
-    // API call
-    const data = await fetch("https://api.github.com/users/nikhilkrp");
-    const json = await data.json();
-    // console.log(json);
-    this.setState({
-      userInfo: json,
-    });
-  }
+  
   componentDidUpdate() {
     console.log(this.props.name + " component Did Update");
   }
@@ -51,8 +42,8 @@ class UserClass extends React.Component {
     console.log(this.props.name + " component will unmount");
   }
 
-  render() {
-    const { name, login, avatar_url } = this.state.userInfo;
+  render() { 
+     
     // const { name, location } = this.props;
     // const { count, count2 } = this.state;
     console.log(this.props.name + " render");
@@ -66,7 +57,7 @@ class UserClass extends React.Component {
               count: this.state.count + 1,
               count2: this.state.count2 + 1,
             });
-          }}
+          } }
         >
           Count increase
         </button> */}

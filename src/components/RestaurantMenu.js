@@ -4,11 +4,14 @@ import Shimmer from "./Shimmer";
 import { CDN_URL } from "../utils/constants";
 import { FiClock } from "react-icons/fi";
 import { AiOutlineStar } from "react-icons/ai"; 
+import { useDispatch } from "react-redux";
+import {addItem} from "../slice/cartSlice"
 
 
 const RestaurantsMenu = () => {
   const { resId } = useParams();
   const { restaurantInfo, itemCards } = useRestaurantMenu(resId);
+  const dispatch = useDispatch()
 
   if (!restaurantInfo) return <Shimmer/>;
 
@@ -20,6 +23,10 @@ const RestaurantsMenu = () => {
     avgRating,
     deliveryTime,
   } = restaurantInfo;
+ const handleAddItem=(item)=>{
+  dispatch(addItem(item));
+ }
+
 
   
   return (
@@ -70,6 +77,7 @@ const RestaurantsMenu = () => {
         <h2>Menu</h2>
         <h3 className="items">{itemCards.length} items</h3>
         <div className="menu-main-card-container">
+       
           {itemCards.map((item) => (
             <div key={item.card.info.id} className="menu-card">
               <div className="menu-card-left">
@@ -84,6 +92,7 @@ const RestaurantsMenu = () => {
                 </h4>
               </div>
               <div className="menu-card-right">
+               <button onClick={()=>handleAddItem(item)} className="bg-green-500 rounded-lg p-1">Add</button>
                 <img src={CDN_URL + item.card.info.imageId} alt="Menu Info" />
               </div>
             </div>

@@ -25,7 +25,7 @@ class About extends Component {
       <div className="about-page">
         <h1>About Class Component</h1>
         <h2>This is About Page</h2>
-        <UserClass name={'First'} location={'Badvel class'} />
+        <UserClass name={'First'} location={'Badvel class'} /> 
       </div>
     );
   }
@@ -44,6 +44,7 @@ class About extends Component {
 *    - Second Child Render()
 
 *     <DOM UPDATED - IN SINGLE BATCH> -> Optimizes the Performance of App  -- Commit Phase
+// commit phase has been batched together
 *    - First Child ComponentDidMount()
 *    - Second Child ComponentDidMount()
 
