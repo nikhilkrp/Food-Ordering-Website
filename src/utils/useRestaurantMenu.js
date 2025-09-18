@@ -33,7 +33,7 @@ const useRestaurantMenu = (resId) => {
 
   const itemCards = itemCardContainer?.card?.card?.itemCards;
 
-  console.log(itemCards);
+  // console.log(itemCards);
 
   return { restaurantInfo, itemCards };
 };

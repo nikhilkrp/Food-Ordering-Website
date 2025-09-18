@@ -49,6 +49,7 @@ class UserClass extends React.Component {
     console.log(this.props.name + " render");
     return (
       <div className="user-card">
+
         {/* <h1>Count:{count}</h1>
         <h1>Count2:{count2}</h1>
         <button
@@ -61,10 +62,11 @@ class UserClass extends React.Component {
         >
           Count increase
         </button> */}
-        <img src={avatar_url} alt="" />
-        <h1>Name:{name}</h1>
+
+        {/* <img src={avatar_url} alt="" /> */}
+        <h1>Name:Nikhil</h1>
         <h3>Contact:91xxxxx99</h3>
-        <h3>Login:{login}</h3>
+        <h3>Login:hi login there</h3>
       </div>
     );
   }

@@ -30,7 +30,7 @@ const RestaurantsMenu = () => {
 
   
   return (
-    <div className="menu">
+  <div className="menu">
     {/* header section in menu */}
       <header className="menu-header">
         <div className="menu-header-left">
@@ -71,7 +71,7 @@ const RestaurantsMenu = () => {
             <h3>{costForTwoMessage}</h3>
           </div>
         </div>
-      </header>
+    </header>
 {/* menu item section */}
       <div className="menu-main">
         <h2>Menu</h2>
