@@ -101,7 +101,7 @@ const Body = () => {
       </div>
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 text-center p-6 mt-10">
-        <p>© 2025 Foodie. All rights reserved.</p>
+        <p>© 2025 Food Cart. All rights reserved.</p>
       </footer>
     </div>
   );

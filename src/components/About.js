@@ -12,10 +12,10 @@ const About = () => {
       {/* Intro Section */}
       <section className="max-w-5xl mx-auto p-8 text-center">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-          Welcome to Foodie
+          Welcome to Food Cart
         </h2>
         <p className="text-gray-600 leading-relaxed">
-          At <strong>Foodie</strong>, we believe food is more than just a meal –
+          At <strong>Food Crat</strong>, we believe food is more than just a meal –
           it’s an experience. We started our journey in 2020 with a simple idea:
           to bring delicious, fresh, and affordable meals straight to your
           doorstep. Whether you're craving a cheesy pizza, spicy biryani, or a
@@ -91,7 +91,7 @@ const About = () => {
       </section>
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 text-center p-6 mt-10">
-        <p>© 2025 Foodie. All rights reserved.</p>
+        <p>© 2025 Food Cart. All rights reserved.</p>
       </footer>
     </div>
    
