@@ -4,9 +4,7 @@ const Grocery = () => {
     <p className="font-extrabold text-green-500   p-10 text-3xl  ">Want Some Fresh Grocery Items !!</p>
      <a href="https://grocery-ordering-project-bly3.vercel.app/"><button className="text-white bg-green-500 p-4 rounded-md hover:scale-110 hover:bg-green-700 text-bold">Click Here!</button></a>
      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 text-center p-6 mt-10">
-        <p>© 2025 Foodie. All rights reserved.</p>
-      </footer>
+     
     </div>
   );
 };
