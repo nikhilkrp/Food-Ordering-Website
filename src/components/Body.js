@@ -22,7 +22,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const {data} = await axios.get("http://localhost:5000/restaurants");
+    const {data} = await axios.get("https://backend2-1-a7yz.onrender.com");
     console.log(data);
 
     const restaurants = data?.data?.cards?.find(
