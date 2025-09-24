@@ -21,7 +21,7 @@ const Itemlist = ({ items, dummy }) => {
             {items.map((item) => (
                 <div key={item.card.info.id} className="menu-card">
                     <div className="menu-card-left">
-                        <h2 className="menu-name">{item.card.info.name}</h2>
+                        <h1 className="menu-name">{item.card.info.name}</h1>
                         <h3 className="menu-price">
                             ₹
                             {item.card.info.price / 100 ||
@@ -32,7 +32,7 @@ const Itemlist = ({ items, dummy }) => {
                         </h4>
                     </div>
                     <div className="menu-card-right">
-                        <button onClick={() => handleAddItem(item)} className="bg-green-500 rounded-lg p-1">Add</button>
+                        <button onClick={() => handleAddItem(item)}>Add + </button>
                         <img src={CDN_URL + item.card.info.imageId} alt="Menu Info" />
                     </div>
                 </div>

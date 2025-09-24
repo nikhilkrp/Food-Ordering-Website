@@ -447,12 +447,13 @@ body {
 /* * Menu page */
 .menu-header {
   height: 30vh;
-  background-color: #000;
+  background:linear-gradient(to bottom , rgb(0, 0, 0) ,rgba(31, 31, 31, 0.515));
   color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 80px;
+  
 }
 
 .menu-header .menu-header-left img {
@@ -464,41 +465,43 @@ body {
 }
 
 .menu-header .menu-header-right .top h1 {
-  font-size: 40px;
-  font-weight: normal;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .menu-header .menu-header-right .top h3 {
-  font-weight: normal;
+  font-weight: medium;
+  font-size: large;
   opacity: 0.7;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .menu-header .menu-header-right .bottom {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   margin-top: 20px;
 }
 
 .menu-header .menu-header-right .bottom h4 {
-  border-right: 4px solid #ccc;
-  padding-right: 20px;
+  border-right: 5px solid #ccc;
+  padding-right: 25px;
 }
 
 .menu-main {
-  /* margin-top: 100px; */
   margin: 80px 150px;
 }
 
 .menu-main h2 {
-  font-size: 30px;
-  opacity: 0.8;
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .menu-main .items {
-  font-size: 14px;
-  opacity: 0.6;
+  font-size: 20px;
+  opacity: 0.8;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -506,8 +509,8 @@ body {
 }
 
 .menu-main-card-container {
-  margin-top: 50px;
-  border-radius: 7px;
+  margin-top: 40px;
+  border-radius: 10px;
 }
 
 .menu-card {
@@ -515,14 +518,14 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  background-color: #fff;
+  background-color: #f4f1f1;
   padding: 20px;
-  border-bottom: 1px solid #3b3a3a;
+  margin-top: 30px;
+  border-radius: 10px;
 }
 
 .menu-card-left .menu-name {
   font-size: 24px;
-  opacity: 0.8;
 }
 
 .menu-card-left .menu-price {
@@ -536,11 +539,21 @@ body {
   opacity: 0.8;
   margin-top: 15px;
 }
-
+.menu-card-right{
+  position: relative;
+}
 .menu-card-right img {
-  height: 100px;
-  width: 100px;
+  height: 180px;
+  width: 280px;
   border-radius: 5px;
   background-size: cover;
   background-position: center;
+}
+.menu-card-right button{
+  position: absolute;
+  background-color: black;
+  color: white;
+  bottom: -10px;
+  padding: 2px 20px;
+  left: 40%;
 }
