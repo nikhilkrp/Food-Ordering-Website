@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import axios from "axios";
 
 
 const Body = () => {
@@ -21,15 +22,13 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const {data} = await axios.get("http://localhost:5000/restaurants");
+    console.log(data);
 
-    const json = await data.json();
-
-    const restaurants = json?.data?.cards?.find(
+    const restaurants = data?.data?.cards?.find(
       (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
     )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    
     // update state - listOfRestaurants
     setListOfRestaurants(restaurants || []);
     setFilteredRestaurants(restaurants || []);
@@ -66,7 +65,7 @@ const Body = () => {
           onClick={() => {
             console.log(searchText);
             const filtered = listOfRestaurants.filter((res) =>
-              res.info.name.toLowerCase.includes()(searchText.toLowerCase())
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
             setFilteredRestaurants(filtered);
           }}
