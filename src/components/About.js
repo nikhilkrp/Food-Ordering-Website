@@ -15,7 +15,7 @@ const About = () => {
           Welcome to Food Cart
         </h2>
         <p className="text-gray-600 leading-relaxed">
-          At <strong>Food Crat</strong>, we believe food is more than just a meal –
+          At <strong>Food Cart</strong>, we believe food is more than just a meal –
           it’s an experience. We started our journey in 2020 with a simple idea:
           to bring delicious, fresh, and affordable meals straight to your
           doorstep. Whether you're craving a cheesy pizza, spicy biryani, or a
