@@ -32,7 +32,7 @@ const Itemlist = ({ items, dummy }) => {
                         </h4>
                     </div>
                     <div className="menu-card-right">
-                        <button onClick={() => handleAddItem(item)}>Add + </button>
+                        <button className='rounded-lg' onClick={() => handleAddItem(item)}>Add + </button>
                         <img src={CDN_URL + item.card.info.imageId} alt="Menu Info" />
                     </div>
                 </div>
